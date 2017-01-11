@@ -16,12 +16,12 @@ class Dustbin:
             if garbage.is_squeezed is True:
                 self.paper_content.append(garbage)
             else:
-                raise DustbinContentError("The garbage is not clean!")
+                raise DustbinContentError("The garbage is not squeezed!")
         elif isinstance(garbage, PlasticGarbage):
             if garbage.is_clean is True:
                 self.plastic_content.append(garbage)
             else:
-                raise DustbinContentError("The garbage is not squeezed!")
+                raise DustbinContentError("The garbage is not clean!")
         elif isinstance(garbage, Garbage):
             self.house_waste_content.append(garbage)
         else:
